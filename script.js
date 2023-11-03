@@ -53,6 +53,7 @@ async function getData(planetId){
     const response = await fetch("https://majazocom.github.io/Data/solaris.json")
     // .json() gör om json-filen som är sparad i response till ett js-objekt
     const data = await response.json() 
+
     //.find letar efter en match mot villkoret i arrowfunktionen och returnerar endast det objektet från arrayen.
     const planetData = data.find(planet => planet.latinName === planetId);
     //Skickar vidare ett planetobjekt (den planet som blev klickad på) till displayArticle()
@@ -61,7 +62,9 @@ async function getData(planetId){
     //Kallar därför på funktionen innanför getData för att den är triggad av ett klick.
     displayPopUp()
     makeSunToMoon()
+    
 }
+
 function makeSunToMoon(){
     sun.style.backgroundColor = "#428ED4";
     // Två boxshadows med två olika nyanser och storlek läggs till kring den numera "blå solen". Den gula boxshadow försvinner därmed.
@@ -76,6 +79,7 @@ function displayPopUp(){
 Namngivit parametern till "planet" för att datan som skickas in har sorterats i getData() så att den nu endast består av ett objekt istället för den ursprungliga arrayen.
 Info läggs ut i infoPopUppen mha DOM-varibler*/
 function displayArticle(planet){
+
     // .innerText skapar en text inom elementet
     articleHeading.innerText = planet.name; // .name ger tillgång till namnpropertyn
     articleHeading2.innerText = planet.latinName;

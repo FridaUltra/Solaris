@@ -23,8 +23,7 @@ h1{
     color: #fff;
     letter-spacing: 4px;
     font-size: 3rem;
-    /* font-weight: 400; */
-    /* font Secular One */
+ 
 }
 h2{
     color: #FFD029;
@@ -57,7 +56,18 @@ dd{
     height: 100vh;
     width: 25vw;
     border-radius: 50%;
-    margin-left: -16vw;
+    margin-left: -15vw;
+}
+#exitButton:hover{
+    color: #fff;
+}
+#exitButton{
+   width: 6rem;
+   height: 2rem;
+   margin-left: 10rem;
+   background: #160e43;
+   border-radius: 4px;
+   color: #ffffff8d;
 }
 .container{
     width: 100vw;    
